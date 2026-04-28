@@ -1,131 +1,394 @@
 {
-  "categories": [
+  "categoryTypes": [
     {
-      "id": "cat-shoulder",
-      "name": "Hombro",
-      "slug": "hombro",
-      "description": "Ejercicios de movilidad, fortalecimiento y rehabilitación del hombro. Ideales para tendinitis, bursitis y postoperatorios.",
-      "targetUserType": "all",
-      "color": "#2C7A7B",
-      "iconUrl": "assets/icons/shoulder.svg"
+      "id": "ct-fortalecimiento",
+      "name": "Fortalecimiento",
+      "emoji": "💪",
+      "description": "Ejercicios para fortalecer los músculos y mejorar la fuerza corporal.",
+      "color": "#2C7A7B"
     },
     {
-      "id": "cat-back",
-      "name": "Espalda",
-      "slug": "espalda",
-      "description": "Ejercicios para aliviar el dolor lumbar, mejorar la postura y fortalecer los músculos paravertebrales.",
-      "targetUserType": "adult",
-      "color": "#4A6FA5",
-      "iconUrl": "assets/icons/back.svg"
+      "id": "ct-estiramientos",
+      "name": "Estiramientos",
+      "emoji": "🧘",
+      "description": "Ejercicios para mejorar la flexibilidad y la movilidad articular.",
+      "color": "#D97706"
+    }
+  ],
+  "zones": [
+    {
+      "id": "zone-thoracic",
+      "name": "Miembros Torácicos",
+      "emoji": "🫀",
+      "description": "Hombro, codo, antebrazo, muñeca y mano."
     },
     {
-      "id": "cat-knee",
-      "name": "Rodilla",
-      "slug": "rodilla",
-      "description": "Rehabilitación de ligamentos, fortalecimiento del cuádriceps y ejercicios de estabilidad para la rodilla.",
-      "targetUserType": "all",
-      "color": "#6B8E6B",
-      "iconUrl": "assets/icons/knee.svg"
+      "id": "zone-pelvic",
+      "name": "Miembros Pélvicos",
+      "emoji": "🦵",
+      "description": "Cadera, rodilla, pierna, tobillo y pie."
     }
   ],
   "exercises": [
     {
       "id": "ex-001",
-      "title": "Círculos de Hombro con Resistencia",
+      "title": "Círculos de Hombro con Banda",
       "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
-      "categoryId": "cat-shoulder",
-      "videoUrl": "https://www.youtube.com/embed/l7C5Gz2MO1Q",
-      "description": "Mejora la movilidad articular y fortalece el manguito rotador. Ideal para recuperación tras tendinitis o bursitis de hombro.",
+      "categoryTypeId": "ct-fortalecimiento",
+      "zoneId": "zone-thoracic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "Mejora la movilidad de tu hombro y te hace más fuerte. ¡Como un superhéroe!",
       "difficulty": "beginner",
-      "durationMinutes": 12,
-      "targetUserType": "adult",
-      "equipment": ["Banda elástica liviana", "Silla sin apoyabrazos"],
-      "repetitions": 15,
+      "durationMinutes": 10,
+      "targetUserType": "kids",
+      "equipment": ["Banda elástica suave", "Silla"],
+      "repetitions": 10,
       "sets": 3,
       "requiresSupervision": false,
       "steps": [
         {
           "stepNumber": 1,
-          "instruction": "Siéntate en una silla con la espalda recta y los pies firmemente apoyados en el suelo. Sostén la banda elástica con ambas manos frente a ti, con los codos ligeramente doblados. Asegúrate de que tu cuello esté relajado y los hombros no estén tensos.",
+          "instruction": "Siéntate bien derecho en tu silla con los pies en el suelo. Toma la banda elástica con ambas manos frente a ti. Imagina que eres un robot y tienes que mantener los codos un poquito doblados. ¡Respira profundo antes de empezar!",
           "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80",
-          "durationSeconds": 15,
-          "repetitions": null
+          "durationSeconds": 10
         },
         {
           "stepNumber": 2,
-          "instruction": "Lentamente eleva ambos brazos hacia adelante hasta la altura de los hombros, manteniendo la banda tensa pero sin brusquedad. Siente la contracción en la parte frontal del hombro. Mantén esta posición por 2 segundos antes de bajar.",
+          "instruction": "Poco a poco sube los brazos hacia adelante hasta que queden a la altura de tus hombros. ¡Mantén la banda estirada! Cuenta hasta 2 en esa posición. Siente cómo trabajan tus músculos. ¡Tú puedes!",
           "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80",
-          "durationSeconds": 30,
-          "repetitions": 15
+          "durationSeconds": 20
         },
         {
           "stepNumber": 3,
-          "instruction": "Regresa los brazos a la posición inicial de forma controlada, resistiendo el peso durante el descenso. Esto activa los músculos estabilizadores del hombro. Descansa 3 segundos entre cada repetición para evitar fatiga muscular excesiva.",
+          "instruction": "Baja los brazos despacio, muy despacio, hasta la posición inicial. ¡No los dejes caer! Descansa 3 segundos y repite. Cada vez que lo haces, ¡tu hombro se hace más fuerte!",
           "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80",
-          "durationSeconds": 20,
-          "repetitions": 15
+          "durationSeconds": 15
         }
       ]
     },
     {
       "id": "ex-002",
-      "title": "Pendulares de Codman",
+      "title": "El Péndulo Mágico",
       "imageUrl": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600&q=80",
-      "categoryId": "cat-shoulder",
-      "videoUrl": null,
-      "description": "Ejercicio de descompresión articular del hombro. Reduce el dolor y mejora el rango de movimiento pasivo. Muy recomendado en fase aguda.",
+      "categoryTypeId": "ct-estiramientos",
+      "zoneId": "zone-thoracic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "Mueve el brazo como un péndulo de reloj para relajar tu hombro. ¡Súper fácil y muy relajante!",
       "difficulty": "beginner",
       "durationMinutes": 8,
-      "targetUserType": "adult",
-      "equipment": ["Mesa o silla alta"],
-      "repetitions": 20,
+      "targetUserType": "kids",
+      "equipment": ["Mesa o escritorio"],
+      "repetitions": 15,
       "sets": 2,
-      "requiresSupervision": false
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Párate junto a tu escritorio o mesa. Apoya la mano buena en la superficie y dobla un poco las rodillas. Deja que el brazo que vamos a ejercitar cuelgue libre como si fuera una cuerda. ¡Relájalo completamente!",
+          "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Mueve tu cuerpo suavemente hacia adelante y hacia atrás, para que el brazo se mueva solo, como un péndulo de reloj. ¡No uses los músculos del brazo! Deja que la gravedad haga el trabajo. Es como ser un muñeco de trapo.",
+          "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80",
+          "durationSeconds": 30
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Ahora haz pequeños círculos con el cuerpo para que el brazo dibuje círculos en el aire. Primero en un sentido, luego en el otro. Cuenta 10 círculos para cada lado. ¡Imagina que estás mezclando una poción mágica!",
+          "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80",
+          "durationSeconds": 20
+        }
+      ]
     },
     {
       "id": "ex-003",
-      "title": "Puente Glúteo para Lumbar",
+      "title": "El Puente Arcoíris",
       "imageUrl": "https://images.unsplash.com/photo-1559963110-71b394e7494d?w=600&q=80",
-      "categoryId": "cat-back",
-      "videoUrl": "https://www.youtube.com/embed/wPM8icPu6H8",
-      "description": "Fortalece los glúteos y la musculatura lumbar. Alivia el dolor de espalda baja y mejora la estabilidad de la columna vertebral.",
+      "categoryTypeId": "ct-fortalecimiento",
+      "zoneId": "zone-pelvic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "Levanta las caderas como un puente y fortalece tu espalda y piernas. ¡Tú construyes el puente más alto!",
       "difficulty": "beginner",
-      "durationMinutes": 15,
-      "targetUserType": "adult",
-      "equipment": ["Colchoneta de yoga"],
+      "durationMinutes": 10,
+      "targetUserType": "kids",
+      "equipment": ["Colchoneta o alfombra"],
       "repetitions": 12,
       "sets": 3,
-      "requiresSupervision": false
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Acuéstate boca arriba en tu colchoneta. Dobla las rodillas y pon los pies planos en el suelo, separados al ancho de tus caderas. Deja los brazos a los lados con las palmas hacia abajo. ¡Imagina que eres un puente que va a levantarse!",
+          "imageUrl": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Aprieta los glúteos y empuja los pies contra el suelo para levantar las caderas. ¡Sube, sube, sube hasta que tu cuerpo forme una línea recta de los hombros a las rodillas! Mantén esta posición y cuenta hasta 3.",
+          "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80",
+          "durationSeconds": 20
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Baja las caderas poquito a poco hasta el suelo. No dejes caer el puente de golpe. Descansa un segundo y vuelve a subir. ¡Cada repetición hace tu espalda más fuerte y resistente!",
+          "imageUrl": "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=500&q=80",
+          "durationSeconds": 15
+        }
+      ]
     },
     {
       "id": "ex-004",
-      "title": "Estiramiento de Gato-Camello",
+      "title": "El Gato y el Camello",
       "imageUrl": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
-      "categoryId": "cat-back",
-      "videoUrl": null,
-      "description": "Moviliza toda la columna vertebral alternando flexión y extensión. Reduce la rigidez matutina y es seguro para casi todas las condiciones lumbares.",
+      "categoryTypeId": "ct-estiramientos",
+      "zoneId": "zone-thoracic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "¡Imita a un gato que se estira y a un camello con su joroba! Perfecto para una espalda flexible.",
       "difficulty": "beginner",
-      "durationMinutes": 10,
-      "targetUserType": "all",
-      "equipment": ["Colchoneta de yoga"],
+      "durationMinutes": 8,
+      "targetUserType": "kids",
+      "equipment": ["Colchoneta o alfombra"],
       "repetitions": 10,
       "sets": 2,
-      "requiresSupervision": false
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Ponte en cuatro patas sobre tu colchoneta: las manos debajo de los hombros y las rodillas debajo de las caderas. Mantén la espalda plana como una mesa. ¡Esta es tu posición de inicio!",
+          "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Ahora haz el GATO: Sopla el aire y curva la espalda hacia arriba como un gato asustado. Mete la barbilla al pecho y aprieta el ombligo. ¡Miau! Mantén esta posición contando hasta 3.",
+          "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80",
+          "durationSeconds": 20
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Ahora el CAMELLO: Inhala y baja la espalda hacia abajo formando una joroba al revés. Levanta la cabeza y la cola. ¡Imagina que eres un camello del desierto! Mantén y cuenta hasta 3. Alterna gato y camello lentamente.",
+          "imageUrl": "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=500&q=80",
+          "durationSeconds": 20
+        }
+      ]
     },
     {
       "id": "ex-005",
-      "title": "Sentadilla Asistida para Rodilla",
+      "title": "Sentadilla del Superhéroe",
       "imageUrl": "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=600&q=80",
-      "categoryId": "cat-knee",
-      "videoUrl": "https://www.youtube.com/embed/U3HlEF_E9fo",
-      "description": "Fortalece el cuádriceps y los isquiotibiales con carga controlada. Ideal para recuperación post-quirúrgica de ligamento cruzado y condromalacia rotuliana.",
-      "difficulty": "intermediate",
-      "durationMinutes": 20,
-      "targetUserType": "adult",
-      "equipment": ["Silla resistente", "Espejo (opcional para control postural)"],
+      "categoryTypeId": "ct-fortalecimiento",
+      "zoneId": "zone-pelvic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "¡Agáchate como si fueras a saltar muy alto y fortalece tus piernas de superhéroe!",
+      "difficulty": "beginner",
+      "durationMinutes": 10,
+      "targetUserType": "kids",
+      "equipment": ["Silla resistente (para apoyo)"],
       "repetitions": 10,
       "sets": 3,
-      "requiresSupervision": true
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Párate frente a tu silla con los pies separados al ancho de los hombros. Puedes poner las manos en la silla para equilibrarte. Mira hacia adelante y pon el pecho bien erguido. ¡Los superhéroes siempre están derechos!",
+          "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Dobla las rodillas y baja lentamente como si fueras a sentarte, pero sin llegar a tocarlo. Las rodillas deben mirar hacia los dedos de los pies. Baja contando hasta 3. ¡Imagina que tienes una capa de superhéroe!",
+          "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80",
+          "durationSeconds": 20
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Aprieta los glúteos y empuja con los talones para subir de nuevo a la posición inicial. ¡Arriba, superhéroe! Sube contando hasta 2. Repite sin parar entre cada una. ¡Cada sentadilla te hace más poderoso!",
+          "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80",
+          "durationSeconds": 15
+        }
+      ]
+    },
+    {
+      "id": "ex-006",
+      "title": "El Flamenco Valiente",
+      "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80",
+      "categoryTypeId": "ct-fortalecimiento",
+      "zoneId": "zone-pelvic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "Equilibrate en un solo pie como un flamenco elegante. ¡Entrena tu equilibrio y concentración!",
+      "difficulty": "beginner",
+      "durationMinutes": 8,
+      "targetUserType": "kids",
+      "equipment": ["Ninguno (puedes usar una pared para apoyo)"],
+      "repetitions": 5,
+      "sets": 3,
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Párate derecho cerca de una pared por si necesitas apoyarte. Pon los brazos extendidos a los lados como las alas de un pájaro. Mira un punto fijo enfrente de ti. ¡Los flamencos siempre miran al frente!",
+          "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Levanta lentamente una pierna doblando la rodilla. Intenta que el muslo quede paralelo al suelo. ¡Eres un flamenco! Mantén el equilibrio sobre el otro pie y cuenta hasta 10 sin moverte.",
+          "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80",
+          "durationSeconds": 30
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Baja la pierna despacio y cambia al otro pie. Haz lo mismo: levanta, equilibra, cuenta hasta 10. Una pierna = 1 repetición. ¡Cada vez que lo practicas, tu equilibrio mejora como magia!",
+          "imageUrl": "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=500&q=80",
+          "durationSeconds": 15
+        }
+      ]
+    },
+    {
+      "id": "ex-007",
+      "title": "Saltos de Rana Feliz",
+      "imageUrl": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
+      "categoryTypeId": "ct-fortalecimiento",
+      "zoneId": "zone-pelvic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "¡Salta como una rana y fortalece tus piernas mientras te diviertes un montón!",
+      "difficulty": "beginner",
+      "durationMinutes": 8,
+      "targetUserType": "kids",
+      "equipment": ["Espacio libre en el suelo"],
+      "repetitions": 8,
+      "sets": 3,
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Ponte en cuclillas con los pies separados más que el ancho de tus hombros. Pon las manos en el suelo entre las piernas. ¡Eres una rana lista para saltar! Respira profundo y prepárate.",
+          "imageUrl": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "¡Salta hacia adelante con todas tus fuerzas! Extiende las piernas y los brazos en el aire. Aterriza suavemente con las dos pies al mismo tiempo, doblando las rodillas para amortiguar. ¡Croac!",
+          "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80",
+          "durationSeconds": 5
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Al aterrizar, vuelve a la posición de rana (cuclillas con manos en el suelo). Descansa 3 segundos y vuelve a saltar. ¡Intenta saltar cada vez un poco más lejos!",
+          "imageUrl": "https://images.unsplash.com/photo-1559963110-71b394e7494d?w=500&q=80",
+          "durationSeconds": 10
+        }
+      ]
+    },
+    {
+      "id": "ex-008",
+      "title": "El Gusano Curioso",
+      "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
+      "categoryTypeId": "ct-estiramientos",
+      "zoneId": "zone-thoracic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "Muévete como un gusano por el suelo para estirar brazos, espalda y abdomen a la vez.",
+      "difficulty": "intermediate",
+      "durationMinutes": 10,
+      "targetUserType": "kids",
+      "equipment": ["Colchoneta o alfombra"],
+      "repetitions": 6,
+      "sets": 2,
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Párate derecho con los pies juntos. Dobla la cintura hacia adelante y pon las manos en el suelo frente a tus pies. Tienes que tocar el suelo con las manos sin doblar las rodillas. Si no puedes, ¡dobla un poquito las rodillas!",
+          "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Camina con las manos hacia adelante, un paso a la vez, hasta que tu cuerpo quede horizontal como una tabla (posición de plancha). ¡Mantén el abdomen apretado para no dejar caer la cadera!",
+          "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80",
+          "durationSeconds": 20
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Ahora camina con los pies hacia las manos, acercando los pies saltito a saltito sin doblar las rodillas. Cuando lleguen tus pies a las manos, ¡ya completaste un gusano! Enderézate y repite. ¡Eres el gusano más valiente!",
+          "imageUrl": "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=500&q=80",
+          "durationSeconds": 20
+        }
+      ]
+    },
+    {
+      "id": "ex-009",
+      "title": "Estiramiento de Cuádriceps",
+      "imageUrl": "https://images.unsplash.com/photo-1559963110-71b394e7494d?w=600&q=80",
+      "categoryTypeId": "ct-estiramientos",
+      "zoneId": "zone-pelvic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "Estira la parte delantera del muslo para que tus piernas sean más flexibles y ágiles.",
+      "difficulty": "beginner",
+      "durationMinutes": 6,
+      "targetUserType": "kids",
+      "equipment": ["Pared o silla para apoyo"],
+      "repetitions": 3,
+      "sets": 2,
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Párate derecho cerca de una pared y apoya una mano en ella. Dobla una pierna hacia atrás y agarra tu tobillo con la mano del mismo lado. Si no llegas, ¡usa un calcetín o una toalla pequeña!",
+          "imageUrl": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Acerca el talón hacia tus glúteos todo lo que puedas sin que te duela. Mantén las rodillas juntas y el cuerpo derecho. Deberías sentir un tirón suave en la parte delantera del muslo. ¡Aguanta 20 segundos!",
+          "imageUrl": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80",
+          "durationSeconds": 20
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Baja el pie al suelo despacio y cambia de pierna. ¡Cada vez que haces este estiramiento, tus músculos se hacen más largos y flexibles como los de un bailarín!",
+          "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80",
+          "durationSeconds": 10
+        }
+      ]
+    },
+    {
+      "id": "ex-010",
+      "title": "Pinza de Tríceps",
+      "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80",
+      "categoryTypeId": "ct-fortalecimiento",
+      "zoneId": "zone-thoracic",
+      "videoUrl": "https://www.youtube.com/embed/5Mv5xoz08Mo",
+      "description": "Fortalece la parte trasera del brazo con este ejercicio súper sencillo. ¡Brazos de campeón!",
+      "difficulty": "beginner",
+      "durationMinutes": 8,
+      "targetUserType": "kids",
+      "equipment": ["Silla resistente"],
+      "repetitions": 10,
+      "sets": 3,
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Siéntate en el borde de tu silla con las manos agarrando el asiento a los lados de tus caderas. Los pies deben estar planos en el suelo y las piernas dobladas a 90 grados. ¡Eres un robot listo para activarse!",
+          "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80",
+          "durationSeconds": 10
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Desliza las caderas hacia adelante de la silla, sosteniéndote solo con los brazos. Dobla los codos y baja el cuerpo hacia el suelo contando hasta 3. ¡Siente cómo trabaja la parte trasera de tus brazos!",
+          "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80",
+          "durationSeconds": 20
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Empuja con las manos para subir de nuevo hasta la posición inicial, estirando los codos. ¡Eso es una repetición! Descansa 2 segundos y repite. ¡Cada vez tus brazos son más poderosos!",
+          "imageUrl": "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=500&q=80",
+          "durationSeconds": 15
+        }
+      ]
     }
   ]
 }

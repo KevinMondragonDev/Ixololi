@@ -1,51 +1,42 @@
 /**
- * @fileoverview Definición de rutas principales de IXOLOLI.
+ * @fileoverview Rutas de IXOLOLI — Plataforma 100% enfocada en niños.
  *
- * Usa lazy loading para cada feature module. Esto asegura que el bundle
- * inicial sea pequeño y que cada sección cargue solo cuando se necesita.
+ * - `/`              → Redirect a `/ninos/mapa` (sin pantalla de bienvenida)
+ * - `/ninos/mapa`    → KidsCatalogComponent  (dentro de MainLayout)
+ * - `/ejercicio/:id` → ExerciseDetailComponent (dentro de MainLayout)
  *
- * Rutas disponibles:
- * - `/`             — Gateway (pantalla de bienvenida y selección de perfil)
- * - `/adultos`      — Catálogo de ejercicios para adultos
- * - `/ninos`        — Catálogo de ejercicios para niños
- * - `/ejercicio/:id`— Detalle de un ejercicio específico
+ * El perfil adulto está deshabilitado en esta versión.
  */
 
 import { Routes } from '@angular/router';
+import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 
 export const routes: Routes = [
+  // ── Rutas con Layout ────────────────────────────────────────────────
   {
     path: '',
-    loadComponent: () =>
-      import('./features/gateway/gateway.component').then(
-        (m) => m.GatewayComponent
-      ),
-    title: 'IXOLOLI — Plataforma de Fisioterapia Accesible',
+    component: MainLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import('./features/kids-catalog/kids-catalog.component').then(
+            (m) => m.KidsCatalogComponent
+          ),
+        title: 'IXOLOLI — ¡Tu Mapa de Misiones!',
+      },
+      {
+        path: 'ejercicio/:id',
+        loadComponent: () =>
+          import('./features/exercise-detail/exercise-detail.component').then(
+            (m) => m.ExerciseDetailComponent
+          ),
+        title: 'IXOLOLI — Detalle de Ejercicio',
+      },
+    ],
   },
-  {
-    path: 'adultos',
-    loadComponent: () =>
-      import('./features/adult-catalog/adult-catalog.component').then(
-        (m) => m.AdultCatalogComponent
-      ),
-    title: 'IXOLOLI — Ejercicios para Adultos',
-  },
-  {
-    path: 'ninos',
-    loadComponent: () =>
-      import('./features/kids-catalog/kids-catalog.component').then(
-        (m) => m.KidsCatalogComponent
-      ),
-    title: 'IXOLOLI — Ejercicios para Niños',
-  },
-  {
-    path: 'ejercicio/:id',
-    loadComponent: () =>
-      import('./features/exercise-detail/exercise-detail.component').then(
-        (m) => m.ExerciseDetailComponent
-      ),
-    title: 'IXOLOLI — Detalle de Ejercicio',
-  },
+
+  // ── Fallback ─────────────────────────────────────────────────────────
   {
     path: '**',
     redirectTo: '',

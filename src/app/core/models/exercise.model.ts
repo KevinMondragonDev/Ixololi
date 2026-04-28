@@ -56,10 +56,18 @@ export interface Exercise {
   imageUrl: string;
 
   /**
-   * ID de la categoría a la que pertenece el ejercicio.
-   * Referencia a `Category.id`.
+   * ID del tipo de categoría clínica al que pertenece el ejercicio.
+   * Referencia a `CategoryType.id`. Primer nivel de la jerarquía.
+   * Ej: `'ct-fortalecimiento'` | `'ct-estiramientos'`
    */
-  categoryId: string;
+  categoryTypeId: string;
+
+  /**
+   * ID de la zona corporal del ejercicio.
+   * Referencia a `Zone.id`. Segundo nivel de la jerarquía.
+   * Ej: `'zone-thoracic'` | `'zone-pelvic'`
+   */
+  zoneId: string;
 
   /**
    * URL del video demostrativo del ejercicio.

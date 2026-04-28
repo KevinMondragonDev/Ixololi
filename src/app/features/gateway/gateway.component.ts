@@ -30,13 +30,28 @@ import { Router } from '@angular/router';
 
       <!-- Logotipo + Tagline -->
       <header class="text-center animate-fade-in-up" style="animation-delay: 0s;">
-        <div class="inline-flex items-center gap-3 mb-4">
-          <!-- Ícono de marca -->
-          <span class="text-4xl" role="img" aria-hidden="true">🌿</span>
-          <h1 class="text-5xl font-extrabold tracking-tight text-gray-800"
-              style="font-family: 'Nunito', sans-serif;">
-            IXOLOLI
-          </h1>
+        <div class="inline-flex items-center gap-4 mb-4 group cursor-default">
+          <!-- Ícono de marca / Mascota interactiva -->
+          <div class="relative h-20 w-16 animate-bounce" style="animation-duration: 3s;">
+            <!-- Parada (Default) -->
+            <img src="assets/images/MascotaParada.png" alt="Mascota" 
+                 class="absolute inset-0 h-full w-full object-contain drop-shadow-md transition-opacity duration-300 opacity-100 group-hover:opacity-0" 
+                 aria-hidden="true" />
+            <!-- Brincando (Hover) -->
+            <img src="assets/images/MascotaBrincando.png" alt="Mascota Feliz" 
+                 class="absolute inset-0 h-full w-full object-contain drop-shadow-md transition-opacity duration-300 opacity-0 group-hover:opacity-100 scale-110" 
+                 aria-hidden="true" />
+          </div>
+          
+          <div class="flex items-center space-x-1 text-5xl md:text-6xl font-black tracking-wider uppercase" style="font-family: 'Nunito', 'Varela Round', sans-serif;">
+            <span class="text-ixololi-teal">I</span>
+            <span class="text-ixololi-teal">X</span>
+            <span class="text-ixololi-yellow">O</span>
+            <span class="text-ixololi-coral">L</span>
+            <span class="text-ixololi-blue">O</span>
+            <span class="text-ixololi-teal">L</span>
+            <span class="text-ixololi-coral">I</span>
+          </div>
         </div>
         <p class="text-base font-semibold text-teal-600 uppercase tracking-widest">
           Fisioterapia accesible para todos
@@ -65,7 +80,7 @@ import { Router } from '@angular/router';
         <!-- ── Tarjeta Adulto ── -->
         <button
           id="btn-adult-profile"
-          (click)="navigateTo('adultos')"
+          (click)="navigateTo('adultos/home')"
           class="group flex-1 flex flex-col items-center gap-5 p-8
                  bg-teal-50 border-2 border-teal-200 rounded-3xl
                  shadow-sm hover:shadow-lg hover:-translate-y-1
@@ -102,7 +117,7 @@ import { Router } from '@angular/router';
         <!-- ── Tarjeta Niño ── -->
         <button
           id="btn-kids-profile"
-          (click)="navigateTo('ninos')"
+          (click)="navigateTo('')"
           class="group flex-1 flex flex-col items-center gap-5 p-8
                  bg-orange-50 border-2 border-orange-200 rounded-3xl
                  shadow-sm hover:shadow-lg hover:-translate-y-1
@@ -153,9 +168,9 @@ export class GatewayComponent {
 
   /**
    * Navega al catálogo según el perfil seleccionado.
-   * @param path - `'adultos'` o `'ninos'`
+   * @param path - `'adultos/home'` | `''`
    */
-  navigateTo(path: 'adultos' | 'ninos'): void {
+  navigateTo(path: 'adultos/home' | ''): void {
     this.router.navigate([path]);
   }
 }
