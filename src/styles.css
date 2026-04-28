@@ -1,0 +1,160 @@
+/* =========================================================
+   IXOLOLI — Global Styles
+   Plataforma de Fisioterapia Accesible
+   Tailwind CSS v4 + Nunito Font + Pastel Identity
+   ========================================================= */
+
+/* Importar fuente Nunito desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Importar Tailwind CSS v4 */
+@import 'tailwindcss';
+
+/* =========================================================
+   TEMA PERSONALIZADO IXOLOLI — Tailwind v4 @theme
+   ========================================================= */
+@theme {
+  /* --- Paleta Teal (acento principal) --- */
+  --color-primary-50:  #f0fdfa;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-300: #5eead4;
+  --color-primary-400: #2dd4bf;
+  --color-primary-500: #14b8a6;
+  --color-primary-600: #0d9488;
+  --color-primary-700: #0f766e;
+  --color-primary-800: #115e59;
+  --color-primary-900: #134e4a;
+
+  /* --- Paleta de superficie crema --- */
+  --color-cream-50:  #FFFBF8;
+  --color-cream-100: #FFF5EE;
+  --color-cream-200: #FFEEDD;
+
+  /* --- Tipografía Nunito --- */
+  --font-family-sans:    'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --font-family-display: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+
+  /* --- Tamaños de fuente base accesibles --- */
+  --font-size-body:  1rem;
+  --font-size-label: 0.9375rem;
+
+  /* --- Radios IXOLOLI --- */
+  --radius-card:  1.25rem;   /* rounded-2xl */
+  --radius-pill:  1.5rem;    /* rounded-3xl */
+  --radius-btn:   0.875rem;  /* rounded-xl */
+
+  /* --- Sombras suaves --- */
+  --shadow-soft: 0 2px 16px 0 rgba(20, 184, 166, 0.06);
+  --shadow-card: 0 4px 24px 0 rgba(55, 65, 81, 0.07);
+  --shadow-hover: 0 8px 32px 0 rgba(55, 65, 81, 0.12);
+}
+
+/* =========================================================
+   ESTILOS BASE GLOBALES
+   ========================================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  line-height: 1.65;
+  color: #374151;           /* gray-700 — carbón oscuro */
+  background-color: #FFFBF8; /* crema suave IXOLOLI */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+}
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+:focus-visible {
+  outline: 3px solid #0d9488;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: #0d9488;
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================================
+   ANIMACIONES SUAVES
+   ========================================================= */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Stagger de tarjetas */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.12s; }
+.stagger-3 { animation-delay: 0.19s; }
+.stagger-4 { animation-delay: 0.26s; }
+
+/* Respetar prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

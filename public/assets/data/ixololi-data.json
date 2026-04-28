@@ -1,0 +1,131 @@
+{
+  "categories": [
+    {
+      "id": "cat-shoulder",
+      "name": "Hombro",
+      "slug": "hombro",
+      "description": "Ejercicios de movilidad, fortalecimiento y rehabilitación del hombro. Ideales para tendinitis, bursitis y postoperatorios.",
+      "targetUserType": "all",
+      "color": "#2C7A7B",
+      "iconUrl": "assets/icons/shoulder.svg"
+    },
+    {
+      "id": "cat-back",
+      "name": "Espalda",
+      "slug": "espalda",
+      "description": "Ejercicios para aliviar el dolor lumbar, mejorar la postura y fortalecer los músculos paravertebrales.",
+      "targetUserType": "adult",
+      "color": "#4A6FA5",
+      "iconUrl": "assets/icons/back.svg"
+    },
+    {
+      "id": "cat-knee",
+      "name": "Rodilla",
+      "slug": "rodilla",
+      "description": "Rehabilitación de ligamentos, fortalecimiento del cuádriceps y ejercicios de estabilidad para la rodilla.",
+      "targetUserType": "all",
+      "color": "#6B8E6B",
+      "iconUrl": "assets/icons/knee.svg"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-001",
+      "title": "Círculos de Hombro con Resistencia",
+      "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+      "categoryId": "cat-shoulder",
+      "videoUrl": "https://www.youtube.com/embed/l7C5Gz2MO1Q",
+      "description": "Mejora la movilidad articular y fortalece el manguito rotador. Ideal para recuperación tras tendinitis o bursitis de hombro.",
+      "difficulty": "beginner",
+      "durationMinutes": 12,
+      "targetUserType": "adult",
+      "equipment": ["Banda elástica liviana", "Silla sin apoyabrazos"],
+      "repetitions": 15,
+      "sets": 3,
+      "requiresSupervision": false,
+      "steps": [
+        {
+          "stepNumber": 1,
+          "instruction": "Siéntate en una silla con la espalda recta y los pies firmemente apoyados en el suelo. Sostén la banda elástica con ambas manos frente a ti, con los codos ligeramente doblados. Asegúrate de que tu cuello esté relajado y los hombros no estén tensos.",
+          "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80",
+          "durationSeconds": 15,
+          "repetitions": null
+        },
+        {
+          "stepNumber": 2,
+          "instruction": "Lentamente eleva ambos brazos hacia adelante hasta la altura de los hombros, manteniendo la banda tensa pero sin brusquedad. Siente la contracción en la parte frontal del hombro. Mantén esta posición por 2 segundos antes de bajar.",
+          "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80",
+          "durationSeconds": 30,
+          "repetitions": 15
+        },
+        {
+          "stepNumber": 3,
+          "instruction": "Regresa los brazos a la posición inicial de forma controlada, resistiendo el peso durante el descenso. Esto activa los músculos estabilizadores del hombro. Descansa 3 segundos entre cada repetición para evitar fatiga muscular excesiva.",
+          "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80",
+          "durationSeconds": 20,
+          "repetitions": 15
+        }
+      ]
+    },
+    {
+      "id": "ex-002",
+      "title": "Pendulares de Codman",
+      "imageUrl": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600&q=80",
+      "categoryId": "cat-shoulder",
+      "videoUrl": null,
+      "description": "Ejercicio de descompresión articular del hombro. Reduce el dolor y mejora el rango de movimiento pasivo. Muy recomendado en fase aguda.",
+      "difficulty": "beginner",
+      "durationMinutes": 8,
+      "targetUserType": "adult",
+      "equipment": ["Mesa o silla alta"],
+      "repetitions": 20,
+      "sets": 2,
+      "requiresSupervision": false
+    },
+    {
+      "id": "ex-003",
+      "title": "Puente Glúteo para Lumbar",
+      "imageUrl": "https://images.unsplash.com/photo-1559963110-71b394e7494d?w=600&q=80",
+      "categoryId": "cat-back",
+      "videoUrl": "https://www.youtube.com/embed/wPM8icPu6H8",
+      "description": "Fortalece los glúteos y la musculatura lumbar. Alivia el dolor de espalda baja y mejora la estabilidad de la columna vertebral.",
+      "difficulty": "beginner",
+      "durationMinutes": 15,
+      "targetUserType": "adult",
+      "equipment": ["Colchoneta de yoga"],
+      "repetitions": 12,
+      "sets": 3,
+      "requiresSupervision": false
+    },
+    {
+      "id": "ex-004",
+      "title": "Estiramiento de Gato-Camello",
+      "imageUrl": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
+      "categoryId": "cat-back",
+      "videoUrl": null,
+      "description": "Moviliza toda la columna vertebral alternando flexión y extensión. Reduce la rigidez matutina y es seguro para casi todas las condiciones lumbares.",
+      "difficulty": "beginner",
+      "durationMinutes": 10,
+      "targetUserType": "all",
+      "equipment": ["Colchoneta de yoga"],
+      "repetitions": 10,
+      "sets": 2,
+      "requiresSupervision": false
+    },
+    {
+      "id": "ex-005",
+      "title": "Sentadilla Asistida para Rodilla",
+      "imageUrl": "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=600&q=80",
+      "categoryId": "cat-knee",
+      "videoUrl": "https://www.youtube.com/embed/U3HlEF_E9fo",
+      "description": "Fortalece el cuádriceps y los isquiotibiales con carga controlada. Ideal para recuperación post-quirúrgica de ligamento cruzado y condromalacia rotuliana.",
+      "difficulty": "intermediate",
+      "durationMinutes": 20,
+      "targetUserType": "adult",
+      "equipment": ["Silla resistente", "Espejo (opcional para control postural)"],
+      "repetitions": 10,
+      "sets": 3,
+      "requiresSupervision": true
+    }
+  ]
+}
