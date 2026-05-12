@@ -24,11 +24,11 @@ import { RouterLink } from '@angular/router';
            aria-label="IXOLOLI — Ir al mapa de misiones">
           <div class="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
             <!-- Mascota Parada (Default) -->
-            <img src="assets/images/MascotaParada.png" alt="Mascota" 
+            <img src="assets/images/mascota-parada.png" alt="Mascota" 
                  class="absolute inset-0 h-full w-full object-contain drop-shadow-sm transition-opacity duration-300 opacity-100 group-hover:opacity-0" 
                  aria-hidden="true" />
             <!-- Mascota Brincando (Hover) -->
-            <img src="assets/images/MascotaBrincando.png" alt="Mascota Brincando" 
+            <img src="assets/images/mascota-brincando.png" alt="Mascota Brincando" 
                  class="absolute inset-0 h-full w-full object-contain drop-shadow-sm transition-opacity duration-300 opacity-0 group-hover:opacity-100" 
                  aria-hidden="true" />
           </div>

@@ -32,14 +32,14 @@ import { Router } from '@angular/router';
       <header class="text-center animate-fade-in-up" style="animation-delay: 0s;">
         <div class="inline-flex items-center gap-4 mb-4 group cursor-default">
           <!-- Ícono de marca / Mascota interactiva -->
-          <div class="relative h-20 w-16 animate-bounce" style="animation-duration: 3s;">
-            <!-- Parada (Default) -->
-            <img src="assets/images/MascotaParada.png" alt="Mascota" 
-                 class="absolute inset-0 h-full w-full object-contain drop-shadow-md transition-opacity duration-300 opacity-100 group-hover:opacity-0" 
+          <div class="relative h-32 w-28 md:h-40 md:w-36 animate-bounce" style="animation-duration: 3s;">
+            <!-- Mascota Parada (Default) -->
+            <img src="assets/images/mascota-parada.png" alt="Mascota" 
+                 class="absolute inset-0 h-full w-full object-contain drop-shadow-2xl transition-transform duration-300 opacity-100 group-hover:opacity-0 group-hover:scale-110" 
                  aria-hidden="true" />
-            <!-- Brincando (Hover) -->
-            <img src="assets/images/MascotaBrincando.png" alt="Mascota Feliz" 
-                 class="absolute inset-0 h-full w-full object-contain drop-shadow-md transition-opacity duration-300 opacity-0 group-hover:opacity-100 scale-110" 
+            <!-- Mascota Brincando (Hover) -->
+            <img src="assets/images/mascota-brincando.png" alt="Mascota Feliz" 
+                 class="absolute inset-0 h-full w-full object-contain drop-shadow-2xl transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:scale-110" 
                  aria-hidden="true" />
           </div>
           
