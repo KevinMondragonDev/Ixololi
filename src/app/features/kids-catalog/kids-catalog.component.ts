@@ -134,10 +134,10 @@ const CTA_PHRASES = ['¡Jugar!', '¡A la misión!', '¡Vamos!', '¡Empezar!'];
             <div class="flex-shrink-0 relative animate-fade-in-up stagger-2 group cursor-pointer" aria-hidden="true">
               <div class="relative h-28 w-24 animate-bounce" style="animation-duration: 3s;">
                 <!-- Parada (Default) -->
-                <img src="assets/images/MascotaParada.png" alt="Mascota" 
+                <img src="assets/images/mascota-parada.png" alt="Mascota" 
                      class="absolute inset-0 h-full w-full object-contain drop-shadow-lg transition-transform duration-300 opacity-100 group-hover:opacity-0 group-hover:scale-110" />
                 <!-- Brincando (Hover) -->
-                <img src="assets/images/MascotaBrincando.png" alt="Mascota Brincando" 
+                <img src="assets/images/mascota-brincando.png" alt="Mascota Brincando" 
                      class="absolute inset-0 h-full w-full object-contain drop-shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:scale-110" />
               </div>
             </div>
